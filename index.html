@@ -33,7 +33,7 @@
         /* luna */
         .moon {
             position: absolute;
-            top: 100px;
+            top: 40px;
             right: 40px;
             width: 90px;
             height: 90px;
@@ -47,7 +47,7 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 30%;
+            height: 25%;
             background:
                 repeating-linear-gradient(0deg,
                     #0b3556,
@@ -59,11 +59,12 @@
         /* nave */
         .ship {
             position: absolute;
-            bottom: 25%;
+            bottom: 20%;
             left: 50%;
             transform: translateX(-50%);
             font-size: 60px;
-            opacity: .2;
+            opacity: .7;
+            z-index: 100;
         }
 
         .title {
@@ -92,7 +93,7 @@
                 0 0 25px rgba(0, 0, 0, .5);
             cursor: pointer;
             animation: float 3s ease-in-out infinite;
-            z-index: 5;
+            z-index: 101;
         }
 
         @keyframes float {
@@ -168,7 +169,7 @@
         .open .scroll {
             width: min(90vw, 380px);
             height: min(72vh, 620px);
-            top: -80px;
+            top: -120px;
             border-radius: 10px;
             box-shadow: 0 0 30px rgba(0, 0, 0, .5);
         }
@@ -233,10 +234,10 @@
 
         .hint {
             position: absolute;
-            bottom: 60px;
+            bottom: 12%;
             color: #d9bf7c;
             opacity: .7;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         @media(max-width:600px) {
@@ -253,6 +254,14 @@
                 width: 70px;
                 height: 70px;
             }
+
+            body {
+                height: 90vh;
+            }
+
+            .moon {
+                top: 100px;
+            }
         }
     </style>
 </head>
@@ -263,8 +272,6 @@
 
     <h1 class="title">☠ Messaggio dal mare ☠</h1>
 
-    <div class="ship">⛵</div>
-
     <div class="bottle" id="bottle">
 
         <div class="neck"></div>
@@ -274,14 +281,13 @@
 
             <div class="message">
 
-                <br>
-
-                <p>
+                <p style="margin-top: 10px;">
                     Giovani filibustieri!
                 </p>
 
                 <p>
-                    Le acque si agitano e una grande impresa ci attende. Quattro vascelli sono stati chiamati a prendere il
+                    Le acque si agitano e una grande impresa ci attende. Quattro vascelli sono stati chiamati a prendere
+                    il
                     largo e ciascun equipaggio si renderà degno delle più
                     grandi leggende dei sette mari.
                 </p>
