@@ -17,7 +17,6 @@
         }
 
         body {
-            overflow: hidden;
             height: 100vh;
             background:
                 radial-gradient(circle at top, rgba(255, 255, 255, .1), transparent),
@@ -146,11 +145,18 @@
 
         .message {
             opacity: 0;
-            padding: 20px;
+            padding: 25px;
             color: #3a2612;
             font-size: 18px;
             line-height: 1.7;
             transition: .8s;
+
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            -webkit-overflow-scrolling: touch;
+            /* scroll fluido su iPhone */
         }
 
         .open .cork {
@@ -165,9 +171,15 @@
             box-shadow: 0 0 30px rgba(0, 0, 0, .5);
         }
 
+
         .open .message {
             opacity: 1;
             transition-delay: .7s;
+            pointer-events: auto;
+        }
+
+        .scroll {
+            touch-action: pan-y;
         }
 
         /* pergamena */
@@ -237,47 +249,125 @@
 
             <div class="message">
 
-                <h2>☠ Messaggio del Capitano ☠</h2>
+                <h3>☠ Messaggio del Capitano ☠</h3>
 
-                Ahoy, giovani filibustieri!
+                <br>
 
-                Le acque si agitano e una grande impresa ci attende. Quattro navi sono state chiamate a prendere il
-                largo e ciascun equipaggio dovrà preparare il proprio angolo del campo, rendendolo degno delle più
-                grandi leggende dei sette mari.
+                <p>
+                    Ahoy, giovani filibustieri!
+                </p>
 
-                🏴‍☠️ <b>Le Pantere</b> salperanno a bordo della leggendaria <b>Perla Nera</b>.
+                <p>
+                    Le acque si agitano e una grande impresa ci attende. Quattro navi sono state chiamate a prendere il
+                    largo e ciascun equipaggio dovrà preparare il proprio angolo del campo, rendendolo degno delle più
+                    grandi leggende dei sette mari.
+                </p>
 
-                ⚔️ <b>I Cobra</b> solcheranno i mari sulla veloce <b>HMS Interceptor</b>.
+                <br>
+                <hr>
+                <br>
 
-                🌊 <b>I Falconi</b> avranno il comando dell'inquietante <b>Olandese Volante</b>.
 
-                ⭐ <b>Le Lontre</b> guideranno la maestosa <b>HMS Endeavour</b>.
+                <h3>🏴‍☠️ Le Pantere</h3>
+                <p>
+                    salperanno a bordo della leggendaria <b>Perla Nera</b>.
+                </p>
 
-                Ogni equipaggio dovrà preparare:
+                <br>
 
-                📜 Il progetto del proprio angolo di nave e del territorio che lo circonda.
+                <h3>⚔️ I Cobra</h3>
+                <p>
+                    solcheranno i mari sulla veloce <b>HMS Interceptor</b>.
+                </p>
 
-                🪓 Un ostacolo o una prova del percorso Hebert che metta alla prova il coraggio e l'astuzia di coloro
-                che vi passeranno.
+                <br>
 
-                🙏 Una preghiera da condividere con tutta la ciurma, affinché il vento sia favorevole e il Signore
-                accompagni il nostro viaggio.
+                <h3>🌊 I Falconi</h3>
+                <p>
+                    avranno il comando dell'inquietante <b>Olandese Volante</b>.
+                </p>
 
-                🔥 Un fuoco serale, con racconti, giochi, canti e sorprese degne dei più grandi pirati.
+                <br>
 
-                Che nessuno si presenti impreparato!
+                <h3>⭐ Le Lontre</h3>
+                <p>
+                    guideranno la maestosa <b>HMS Endeavour</b>.
+                </p>
 
-                Il giorno della partenza si avvicina, e il Capitano si aspetta da ogni nave impegno, fantasia e spirito
-                di squadra.
+                <br>
+                <hr>
+                <br>
 
-                Che i venti vi siano favorevoli, che le stelle guidino la rotta e che il mare custodisca i vostri
-                tesori.
+                <p>
+                    Ogni equipaggio dovrà preparare:
+                </p>
 
-                Firmato,
+                <br>
 
-                ☠ Il Capitano Jack Sparrow
-                e il Consiglio dei Vecchi del Mare ☠
+                <h3>📜 Il Progetto dell'Angolo</h3>
 
+                <p>
+                    Trasformate il vostro territorio in una nave degna di essere ricordata nelle cronache dei sette
+                    mari.
+                </p>
+
+                <br>
+
+                <h3>🪓 Una Prova per i Naviganti</h3>
+
+                <p>
+                    Preparate un ostacolo o una sfida che metta alla prova coraggio, abilità e spirito piratesco di chi
+                    attraverserà i vostri domini.
+                </p>
+
+                <br>
+
+                <h3>🙏 La Preghiera della Ciurma</h3>
+
+                <p>
+                    Scrivete una preghiera da condividere con tutti i marinai, affinché il Signore benedica il viaggio e
+                    mantenga salda la rotta delle nostre navi.
+                </p>
+
+                <br>
+
+                <h3>🔥 Il Fuoco Serale</h3>
+
+                <p>
+                    Organizzate un fuoco serale con giochi, racconti, canti e sorprese degne dei più grandi capitani.
+                </p>
+
+                <br>
+                <hr>
+                <br>
+
+                <p>
+                    Che nessuno si presenti impreparato!
+                </p>
+
+                <p>
+                    Il giorno della partenza si avvicina e il Capitano si aspetta da ogni nave impegno, fantasia e
+                    spirito di squadra.
+                </p>
+
+                <p>
+                    Che i venti vi siano favorevoli, che le stelle guidino la rotta e che il mare custodisca i vostri
+                    tesori.
+                </p>
+
+                <br>
+
+                <div style="text-align:right;">
+
+                    <i>
+                        Firmato,
+                        <br><br>
+                        ☠ Il Capitano Jack Sparrow
+                        <br>
+                        e il Consiglio dei Vecchi del Mare ☠
+                    </i>
+
+                </div>
 
             </div>
 
